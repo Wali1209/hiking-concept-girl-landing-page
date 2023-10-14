@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap');
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+
+}
+main{
+  width: 100%;
+  min-height: 100dvh;
+  background-image: url("./assets/bg.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+/* navigation bar styling */
+nav.navbar {
+  padding: 18px 0;
+  width: 100%;
+  z-index: 9999;
+}
+/* nav.navbar.scrolled {
+  padding: 0;
+  background-color: #121212;
+} */
+nav.navbar .navbar-nav .nav-link {
+  font-weight: 500;
+  color: #000 !important;
+  letter-spacing: 0.8px;
+  font-size: 1.125rem;
+  margin: 0 2dvw ;
+  position: relative;
+
+}
+nav.navbar .navbar-nav .nav-link::after{
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  background-color: #000;
+  
+}
+nav.navbar .navbar-nav a.nav-link:hover::after,
+nav.navbar .navbar-nav a.nav-link.active::after {
+  width: 100%;
+  transition: all .5s ease;
+}
+.call-now{
+text-align: end;
+}
+.call-now span{
+font-weight: 800;
+
+}
+.call-now span:hover{
+text-decoration: underline;
+cursor: pointer;
+}
+.call-now h1{
+font-weight: 800;
+font-size: 2rem;
+}
+
+
+
+/* banner Styling */
+.banner{
+  margin-top: 2rem;
+}
+.banner .banner-text{
+  text-transform: uppercase;
+  align-self: center;
+}
+.banner .banner-text .tagline1 {
+  text-align: end;
+  font-weight: 800;
+  line-height: 2.5rem;
+}
+.banner .banner-text .tagline2{
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 4.5rem;
+  margin: 0;
+}
+
+.banner button {
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: relative;
+  border: none;
+  overflow: hidden; /* Create a new stacking context */
+  z-index: 1; /* Set a higher z-index value for the button */
+   /* Add a transition for the background color */
+}
+
+.banner button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #5E5932;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: -1; 
+  transition: left 0.3s ease;
+}
+
+
+
+.banner button:hover::after {
+  left: 0%; /* Scale the pseudo-element to 1 on hover */
+}
+
+.banner .banner-img{
+  width: 750px;
+}
+.lower-banner{
+  margin: 2rem;
+}
+.lower-banner p{
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.lower-banner .lower-content{
+  display: flex;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+.lower-banner .lower-content img{
+  width: 8rem;
+}
+.lower-banner .lower-content p{
+  margin-left: 1rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.lower-banner .social-icons{
+  text-align: end;
+}
+.lower-banner .social-icons span{
+  font-size: 1.5rem;
+  display: inline-block;
+  width: 40px; /* Adjust the size as needed */
+  height: 40px; /* Make sure width and height are the same for a circle */
+  background: #000;
+  color: #fff; /* Background color for the circular shape */
+  text-align: center;
+  line-height: 40px; /* Vertically center the icon */
+  border-radius: 50%; /* Creates the circular shape */
+  margin-right: 10px; 
+ cursor: pointer;
+}
+
+.lower-banner .social-icons span:hover{
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+.copyright-text{
+  margin-bottom: 1rem;
+}
+/* media queries*/
+@media screen and (max-width:576px){
+
+
+  .banner .banner-text .tagline1 {
+    line-height: 1.5rem;
+  }
+  .banner .banner-text .tagline2{
+
+    font-size: 2.5rem;
+    line-height: 2rem;
+    
+  }
+
+
+ .banner-btn{
+  display: flex;
+  justify-content: center;
+ }
+
+  
+
+  .lower-banner{
+    margin: 2rem .5rem;
+    margin-top: 5rem;
+  }
+  .lower-banner p{
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 1rem;
+  }
+  .lower-banner .social-icons {
+    justify-content: center;
+    align-items: end;
+    text-align: center;
+  }
+
+}
+
+@media screen and (min-width:992px) and (max-width:1200px){
+  .banner .banner-img{
+    width: 550px;
+    margin-left:2rem ;
+  }
+  .banner button{
+    font-size: .75rem;
+  }
+}
+
+
+@media screen and (max-width:576px){
+  body{
+    font-size: 10px;
+  }
+  .call-now{
+    width: 100%!important;
+    text-align: center;
+    margin: 1rem auto;
+  }
+  .call-now span{
+    text-align: end;
+  }
+  }
+  
+  @media screen and (max-width:1200px) {
+  
+  .navbar-toggler{
+    position: absolute;
+    top: 1.125rem;
+    right: 0;
+  
+  }
+  nav.navbar .navbar-nav{
+    margin-bottom: 1rem;
+  }
+  nav.navbar .navbar-nav .nav-link{
+    display: inline-flex;
+    justify-content: center;
+  }
+  .call-now{
+    width: 100%!important;
+    text-align: center;
+    margin: 1rem auto;
+  }
+  .banner .banner-img{
+    width: 500px;
+    margin-top: -5rem;
+  }
+  
+  }

@@ -25,7 +25,7 @@ const NavbarComponent = () => {
     <div className="row justify-content-center">
       <div className="col-11 ">
         <Navbar
-          expand="lg"
+          expand="xl"
           // variant="dark"
           className={isScrolled ? "scrolled" : ""}
         >

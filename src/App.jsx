@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
   return (
-    <main className="container-xxl border border-success">
+    <main className="container-fluid border border-success">
       <NavbarComponent />
       <Banner />
     </main>
