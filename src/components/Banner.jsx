@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import bannerImg from "../assets/banner.png";
 import hillsImg from "../assets/Hills-icon.png";
 
@@ -9,11 +9,18 @@ import {
 } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Banner = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <>
       <div className="row justify-content-center banner">
-        <div className="col-lg-5 banner-text">
+        <div className="col-lg-5 banner-text" data-aos="fade-up">
           <div className="row">
             <div className="col-6 border-end border-2 border-black">
               <h1 className="tagline1">
@@ -38,7 +45,11 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 d-none d-lg-block">
+        <div
+          className="col-lg-6 d-none d-lg-block"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <img
             className="img-fluid banner-img"
             src={bannerImg}
