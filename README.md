@@ -23,8 +23,8 @@ Hiking-concept-girl-landing-page
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/Wali1209/hiking-concept-girl-landing-pag/)
-- Live Site URL: [gh-pages](https://wali1209.github.io/hiking-concept-girl-landing-pag/)
+- Solution URL: [GitHub](https://github.com/Wali1209/hiking-concept-girl-landing-page/)
+- Live Site URL: [gh-pages](https://wali1209.github.io/hiking-concept-girl-landing-page/)
 
 ## My process
 
